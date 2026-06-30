@@ -6,7 +6,9 @@ import { getProducts } from "@/lib/shopify";
 
 export default async function HomePage() {
   const products = await getProducts().catch(() => []);
-  const featured = products.slice(0, 4);
+  const sacredPaws = products.find((product) => product.title.includes("Sacred Paws"));
+  const rest = products.filter((product) => product !== sacredPaws);
+  const featured = (sacredPaws ? [sacredPaws, ...rest] : rest).slice(0, 4);
 
   return (
     <>

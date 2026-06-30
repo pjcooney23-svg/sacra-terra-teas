@@ -44,7 +44,14 @@ export default function ProductCard({ product }: { product: Product }) {
       </div>
 
       <div className="flex flex-1 flex-col gap-1 p-4">
-        <h3 className="font-serif text-lg font-semibold text-forest">{product.title}</h3>
+        <h3 className="font-serif text-lg font-semibold text-forest">
+          {product.title}
+          {product.title.includes("Sacred Paws") && (
+            <span aria-label="Dog-friendly tea" title="Dog-friendly tea" className="ml-1">
+              🐾
+            </span>
+          )}
+        </h3>
         <p className="text-sm font-medium text-gold-500">
           {formatMoney(product.priceRange.minVariantPrice)}
         </p>

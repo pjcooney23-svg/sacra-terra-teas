@@ -65,7 +65,14 @@ export default async function ProductPage({ params }: { params: { handle: string
         </div>
 
         <div>
-          <h1 className="font-serif text-3xl text-forest-700 sm:text-4xl">{product.title}</h1>
+          <h1 className="font-serif text-3xl text-forest-700 sm:text-4xl">
+            {product.title}
+            {product.title.includes("Sacred Paws") && (
+              <span aria-label="Dog-friendly tea" title="Dog-friendly tea" className="ml-2">
+                🐾
+              </span>
+            )}
+          </h1>
 
           {product.tags.length > 0 && (
             <div className="mt-3 flex flex-wrap gap-2">
