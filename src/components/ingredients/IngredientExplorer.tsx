@@ -175,7 +175,7 @@ export default function IngredientExplorer({
 
             {/* Visual */}
             <div
-              className="relative flex min-h-[260px] items-center justify-center overflow-hidden sm:min-h-[340px]"
+              className="relative flex min-h-[260px] items-center justify-center self-start overflow-hidden sm:min-h-[340px]"
               onTouchStart={onTouchStart}
               onTouchEnd={onTouchEnd}
               style={{ touchAction: "pan-y" }}
@@ -192,6 +192,7 @@ export default function IngredientExplorer({
               <IngredientVisual
                 name={active.commonName}
                 image={active.image}
+                category={active.category}
                 direction={direction}
                 priority={activeIndex === 0}
               />
@@ -250,6 +251,20 @@ export default function IngredientExplorer({
                 <span className="text-xs uppercase tracking-wide text-forest-300">Why we use it</span>
                 <p className="mt-1 text-[15px] leading-relaxed text-forest-500">{active.whyWeUseIt}</p>
               </div>
+
+              {active.healthBenefits && active.healthBenefits.length > 0 && (
+                <div className="mt-6">
+                  <span className="text-xs uppercase tracking-wide text-forest-300">Health benefits</span>
+                  <ul className="mt-2 space-y-1.5">
+                    {active.healthBenefits.map((benefit, i) => (
+                      <li key={i} className="flex items-start gap-2 text-[15px] leading-relaxed text-forest-500">
+                        <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-gold-500" aria-hidden="true" />
+                        <span>{benefit}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
 
               {foundIn.length > 0 && (
                 <div className="mt-6 rounded-lg border border-forest-100 bg-cream-100 p-4">

@@ -16,14 +16,17 @@ export const categoryIcon: Record<IngredientCategory, typeof Flower2> = {
 export default function IngredientVisual({
   name,
   image,
+  category,
   direction,
   priority,
 }: {
   name: string;
   image: string;
+  category: IngredientCategory;
   direction: "forward" | "back";
   priority?: boolean;
 }) {
+  const Icon = categoryIcon[category];
   return (
     <div
       key={name}
@@ -43,15 +46,19 @@ export default function IngredientVisual({
         opacity={0.18}
         className="absolute left-2 top-2 h-20 w-20 sm:h-28 sm:w-28"
       />
-      <div className="relative h-56 w-56 overflow-hidden rounded-full border border-gold-200 bg-cream-100 shadow-soft sm:h-72 sm:w-72">
-        <Image
-          src={image}
-          alt={`${name} specimen`}
-          fill
-          sizes="(min-width: 640px) 288px, 224px"
-          priority={priority}
-          className="object-cover"
-        />
+      <div className="relative flex h-56 w-56 items-center justify-center overflow-hidden rounded-full border border-gold-200 bg-cream-100 shadow-soft sm:h-72 sm:w-72">
+        {image ? (
+          <Image
+            src={image}
+            alt={`${name} specimen`}
+            fill
+            sizes="(min-width: 640px) 288px, 224px"
+            priority={priority}
+            className="object-cover"
+          />
+        ) : (
+          <Icon className="h-16 w-16 text-forest-300 sm:h-20 sm:w-20" strokeWidth={1} aria-hidden="true" />
+        )}
       </div>
     </div>
   );

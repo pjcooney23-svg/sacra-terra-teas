@@ -11,6 +11,7 @@ export type Ingredient = {
   origin: string;
   flavorProfile: string;
   whyWeUseIt: string;
+  healthBenefits?: string[];
   caffeineFree?: boolean;
   image: string;
 };
@@ -30,6 +31,13 @@ export const ingredients: Ingredient[] = [
     flavorProfile: "Floral, mellow, lightly sweet",
     whyWeUseIt:
       "Chamomile gives our blends a gentle softness and a long tradition of comfort.",
+    healthBenefits: [
+      "Promotes relaxation and helps reduce stress and nervous tension",
+      "Supports restful sleep and may improve sleep quality",
+      "Soothes digestive discomfort, bloating, and indigestion",
+      "Possesses gentle anti-inflammatory and antioxidant properties",
+      "May help calm muscle spasms and menstrual discomfort",
+    ],
     caffeineFree: true,
   },
   {
@@ -46,6 +54,13 @@ export const ingredients: Ingredient[] = [
     flavorProfile: "Spicy, warm, slightly sweet",
     whyWeUseIt:
       "Ginger brings a lively warmth that grounds our more energizing blends.",
+    healthBenefits: [
+      "Supports healthy digestion and reduces nausea",
+      "Helps improve circulation and warm the body",
+      "Possesses powerful anti-inflammatory properties",
+      "Supports immune function during seasonal illnesses",
+      "May reduce muscle soreness and joint discomfort",
+    ],
     caffeineFree: true,
   },
   {
@@ -62,6 +77,13 @@ export const ingredients: Ingredient[] = [
     flavorProfile: "Citrusy, fresh, light",
     whyWeUseIt:
       "Lemon balm adds a fresh brightness that balances heavier botanicals.",
+    healthBenefits: [
+      "Calms the nervous system and promotes relaxation",
+      "Helps reduce mild anxiety and emotional stress",
+      "Supports restful sleep without heavy sedation",
+      "Aids digestion, especially when stress contributes to stomach discomfort",
+      "Contains antiviral and antioxidant compounds",
+    ],
     caffeineFree: true,
   },
   {
@@ -78,6 +100,13 @@ export const ingredients: Ingredient[] = [
     flavorProfile: "Earthy, grassy, mineral",
     whyWeUseIt:
       "Nettle leaf adds depth and a grounded, garden-like quality to our blends.",
+    healthBenefits: [
+      "Rich source of vitamins A, C, K, iron, calcium, and magnesium",
+      "Supports healthy kidney and urinary tract function",
+      "Traditionally used to reduce seasonal allergy symptoms",
+      "Helps nourish the body and promote healthy energy levels",
+      "Supports healthy joints through its anti-inflammatory properties",
+    ],
     caffeineFree: true,
   },
   {
@@ -94,6 +123,13 @@ export const ingredients: Ingredient[] = [
     flavorProfile: "Floral, sweet, slightly herbal",
     whyWeUseIt:
       "Lavender lends a fragrant softness that supports a calming tea ritual.",
+    healthBenefits: [
+      "Promotes calmness and emotional balance",
+      "Supports restful sleep and relaxation",
+      "Helps ease stress-related headaches",
+      "Possesses gentle anti-inflammatory properties",
+      "Traditionally used to soothe nervous tension",
+    ],
     caffeineFree: true,
   },
   {
@@ -110,6 +146,14 @@ export const ingredients: Ingredient[] = [
     flavorProfile: "Sweet, woody, anise-like",
     whyWeUseIt:
       "Licorice root brings natural sweetness, often easing the need for added sugar.",
+    healthBenefits: [
+      "Soothes the digestive tract and stomach lining",
+      "Supports healthy adrenal function during times of stress",
+      "Helps calm irritated respiratory tissues",
+      "Possesses anti-inflammatory and antiviral properties",
+      "Traditionally used to harmonize herbal formulas",
+      "Note: not recommended for individuals with uncontrolled high blood pressure, kidney disease, or during prolonged use unless supervised by a qualified healthcare professional",
+    ],
     caffeineFree: true,
   },
   {
@@ -126,6 +170,13 @@ export const ingredients: Ingredient[] = [
     flavorProfile: "Mild, faintly sweet, smooth",
     whyWeUseIt:
       "Marshmallow root gives certain blends a noticeably smoother, softer mouthfeel.",
+    healthBenefits: [
+      "Rich in soothing mucilage that coats irritated tissues",
+      "Supports digestive tract comfort",
+      "Helps soothe sore throats and dry coughs",
+      "Promotes healthy urinary tract function",
+      "Provides gentle anti-inflammatory support",
+    ],
     caffeineFree: true,
   },
   {
@@ -142,6 +193,13 @@ export const ingredients: Ingredient[] = [
     flavorProfile: "Earthy, mild, slightly grassy",
     whyWeUseIt:
       "Skullcap supports the restful character of our evening blends.",
+    healthBenefits: [
+      "A calming nervine that helps ease anxiety and tension",
+      "Supports relaxation without excessive drowsiness",
+      "May relieve muscle tension and nervous headaches",
+      "Traditionally used for stress-related insomnia",
+      "Supports overall nervous system health",
+    ],
     caffeineFree: true,
   },
   {
@@ -158,6 +216,13 @@ export const ingredients: Ingredient[] = [
     flavorProfile: "Creamy, mild, oat-like",
     whyWeUseIt:
       "Milky oats add a soft, nourishing roundness to grounding blends.",
+    healthBenefits: [
+      "Nourishes and strengthens the nervous system",
+      "Traditionally used for burnout, chronic stress, and nervous exhaustion",
+      "Helps promote emotional resilience and mental clarity",
+      "Supports restful sleep while calming frazzled nerves",
+      "Provides minerals that nourish the body and nervous tissue",
+    ],
     caffeineFree: true,
   },
   {
@@ -174,6 +239,14 @@ export const ingredients: Ingredient[] = [
     flavorProfile: "Roasted, earthy, slightly bitter",
     whyWeUseIt:
       "Dandelion root brings a roasted depth to blends meant to feel grounding.",
+    healthBenefits: [
+      "Supports healthy liver function and natural detoxification",
+      "Promotes healthy bile production to aid fat digestion",
+      "Acts as a gentle digestive bitter to stimulate appetite and digestion",
+      "Supports healthy kidney function and fluid balance",
+      "Rich in antioxidants that help protect against cellular damage",
+      "May help support healthy blood sugar metabolism already within the normal range",
+    ],
     caffeineFree: true,
   },
   {
@@ -206,6 +279,429 @@ export const ingredients: Ingredient[] = [
     flavorProfile: "Tart, bright, berry-like",
     whyWeUseIt:
       "Hibiscus adds vivid color and a crisp, tangy lift to our brighter blends.",
+    caffeineFree: true,
+  },
+  {
+    id: "rosemary",
+    image: "/images/ingredients/rosemary.jpg",
+    commonName: "Rosemary",
+    botanicalName: "Salvia rosmarinus",
+    category: "leaf",
+    shortDescription:
+      "A resinous, pine-scented herb long valued for sharpening focus and supporting healthy circulation.",
+    traditionalUses: ["focus", "circulation", "digestive comfort"],
+    plantPart: "Leaf",
+    origin: "Mediterranean",
+    flavorProfile: "Piney, resinous, slightly peppery",
+    whyWeUseIt:
+      "Rosemary lends a bright, herbaceous edge to blends meant to sharpen the mind.",
+    healthBenefits: [
+      "Supports memory, focus, and cognitive function",
+      "Rich in antioxidants that help protect cells from oxidative stress",
+      "Promotes healthy circulation and cardiovascular wellness",
+      "Supports healthy digestion and may help relieve occasional indigestion and bloating",
+      "Traditionally used to support healthy liver function and natural detoxification",
+      "Possesses natural antimicrobial and anti-inflammatory properties",
+      "May help reduce mental fatigue and promote alertness",
+    ],
+    caffeineFree: true,
+  },
+  {
+    id: "cinnamon",
+    image: "/images/ingredients/cinnamon.jpg",
+    commonName: "Cinnamon",
+    botanicalName: "Cinnamomum verum",
+    category: "bark",
+    shortDescription:
+      "A warming, aromatic bark traditionally used to bring sweetness and comfort to blends without added sugar.",
+    traditionalUses: ["warmth", "balance", "digestive comfort"],
+    plantPart: "Bark",
+    origin: "South Asia",
+    flavorProfile: "Sweet, woody, spiced",
+    whyWeUseIt:
+      "Cinnamon brings a cozy warmth and natural sweetness to our comforting blends.",
+    healthBenefits: [
+      "Supports healthy blood sugar metabolism and insulin sensitivity",
+      "Rich in antioxidants that help protect cells from oxidative stress",
+      "Promotes healthy circulation and cardiovascular wellness",
+      "Has natural antimicrobial and antifungal properties",
+      "Aids digestion and may reduce gas and bloating",
+    ],
+    caffeineFree: true,
+  },
+  {
+    id: "turmeric",
+    image: "/images/ingredients/turmeric.jpg",
+    commonName: "Turmeric",
+    botanicalName: "Curcuma longa",
+    category: "root",
+    shortDescription:
+      "A vivid golden root prized for centuries in traditional wellness practices for its warm, earthy character.",
+    traditionalUses: ["vitality", "warmth"],
+    plantPart: "Root",
+    origin: "South Asia",
+    flavorProfile: "Earthy, warm, slightly bitter",
+    whyWeUseIt:
+      "Turmeric adds a golden color and grounding earthiness to our wellness blends.",
+    healthBenefits: [
+      "Rich in curcumin, a potent anti-inflammatory compound",
+      "Supports healthy joints and mobility",
+      "Provides antioxidant protection against cellular damage",
+      "Promotes liver function and healthy detoxification",
+      "Supports cardiovascular and immune health",
+    ],
+    caffeineFree: true,
+  },
+  {
+    id: "anise",
+    image: "/images/ingredients/anise.jpg",
+    commonName: "Anise",
+    botanicalName: "Pimpinella anisum",
+    category: "seed",
+    shortDescription:
+      "A licorice-scented seed traditionally used to ease the stomach and support easy breathing.",
+    traditionalUses: ["digestive comfort", "ease"],
+    plantPart: "Seed",
+    origin: "Eastern Mediterranean, Southwest Asia",
+    flavorProfile: "Sweet, licorice-like, warm",
+    whyWeUseIt:
+      "Anise brings a sweet, licorice-like note that rounds out digestive blends.",
+    healthBenefits: [
+      "Soothes digestive discomfort, gas, and bloating",
+      "Helps relax digestive muscles",
+      "Traditionally used to support respiratory health",
+      "Possesses mild antimicrobial properties",
+      "Offers gentle calming effects",
+    ],
+    caffeineFree: true,
+  },
+  {
+    id: "fennel",
+    image: "/images/ingredients/fennel.jpg",
+    commonName: "Fennel",
+    botanicalName: "Foeniculum vulgare",
+    category: "seed",
+    shortDescription:
+      "An aromatic seed with a sweet, anise-like character, traditionally taken after meals to ease digestion.",
+    traditionalUses: ["digestive comfort"],
+    plantPart: "Seed",
+    origin: "Mediterranean",
+    flavorProfile: "Sweet, anise-like, cooling",
+    whyWeUseIt:
+      "Fennel adds a sweet, cooling finish to blends meant to settle the stomach.",
+    healthBenefits: [
+      "Relieves bloating, gas, and indigestion",
+      "Supports healthy digestion after meals",
+      "Traditionally used to ease infant colic and digestive discomfort",
+      "Contains antioxidants that support overall wellness",
+      "May help freshen breath naturally",
+    ],
+    caffeineFree: true,
+  },
+  {
+    id: "peppermint",
+    image: "/images/ingredients/peppermint.jpg",
+    commonName: "Peppermint",
+    botanicalName: "Mentha piperita",
+    category: "leaf",
+    shortDescription:
+      "A crisp, cooling leaf traditionally enjoyed for its refreshing character and ease on the stomach.",
+    traditionalUses: ["digestive comfort", "refreshment"],
+    plantPart: "Leaf",
+    origin: "Europe, Middle East",
+    flavorProfile: "Cool, minty, crisp",
+    whyWeUseIt:
+      "Peppermint gives our blends a bright, cooling lift.",
+    healthBenefits: [
+      "Relaxes digestive muscles and relieves gas",
+      "Helps reduce nausea and indigestion",
+      "Supports healthy respiratory function",
+      "Provides a cooling sensation that may ease headaches",
+      "Naturally antimicrobial and refreshing",
+    ],
+    caffeineFree: true,
+  },
+  {
+    id: "garlic",
+    image: "/images/ingredients/garlic.jpg",
+    commonName: "Garlic",
+    botanicalName: "Allium sativum",
+    category: "other",
+    shortDescription:
+      "A pungent bulb with a long history of traditional use for supporting the heart and immune system.",
+    traditionalUses: ["vitality", "circulation"],
+    plantPart: "Bulb",
+    origin: "Central Asia",
+    flavorProfile: "Pungent, savory, sharp",
+    whyWeUseIt:
+      "Garlic contributes a bold, savory depth to our more fortifying blends.",
+    healthBenefits: [
+      "Supports cardiovascular and heart health",
+      "Helps maintain healthy blood pressure already within normal range",
+      "Possesses potent antimicrobial, antiviral, and antifungal properties",
+      "Supports immune system function",
+      "Rich in antioxidants that protect cellular health",
+    ],
+    caffeineFree: true,
+  },
+  {
+    id: "passionflower",
+    image: "/images/ingredients/passionflower.jpg",
+    commonName: "Passionflower",
+    botanicalName: "Passiflora incarnata",
+    category: "flower",
+    shortDescription:
+      "A delicate flowering vine traditionally used as a gentle nervine tonic for restless evenings.",
+    traditionalUses: ["calm", "rest"],
+    plantPart: "Flower",
+    origin: "Americas",
+    flavorProfile: "Mild, earthy, faintly grassy",
+    whyWeUseIt:
+      "Passionflower supports the restful character of our calming evening blends.",
+    healthBenefits: [
+      "Promotes relaxation and emotional calm",
+      "Supports restful sleep and healthy sleep cycles",
+      "Helps reduce occasional anxiety and nervous restlessness",
+      "May ease muscle tension caused by stress",
+      "Traditionally used as a gentle nervine tonic",
+    ],
+    caffeineFree: true,
+  },
+  {
+    id: "oregano",
+    image: "/images/ingredients/oregano.jpg",
+    commonName: "Oregano",
+    botanicalName: "Origanum vulgare",
+    category: "leaf",
+    shortDescription:
+      "A robust, savory leaf traditionally valued for its potent antimicrobial character.",
+    traditionalUses: ["vitality", "digestive comfort"],
+    plantPart: "Leaf",
+    origin: "Mediterranean",
+    flavorProfile: "Savory, pungent, earthy",
+    whyWeUseIt:
+      "Oregano brings a robust, savory note to blends meant to feel fortifying.",
+    healthBenefits: [
+      "Contains potent antimicrobial compounds",
+      "Supports immune system health",
+      "Rich in antioxidants that protect against oxidative stress",
+      "Traditionally used to support respiratory wellness",
+      "May aid healthy digestion",
+    ],
+    caffeineFree: true,
+  },
+  {
+    id: "nutmeg",
+    image: "/images/ingredients/nutmeg.jpg",
+    commonName: "Nutmeg",
+    botanicalName: "Myristica fragrans",
+    category: "seed",
+    shortDescription:
+      "A fragrant, warming seed traditionally used sparingly to promote relaxation and restful sleep.",
+    traditionalUses: ["rest", "warmth"],
+    plantPart: "Seed",
+    origin: "Southeast Asia",
+    flavorProfile: "Warm, sweet, aromatic",
+    whyWeUseIt:
+      "Nutmeg adds a whisper of warm spice to our restful evening blends.",
+    healthBenefits: [
+      "Traditionally used to promote relaxation and restful sleep",
+      "Supports healthy digestion in small amounts",
+      "Contains antioxidant compounds",
+      "May help ease occasional digestive discomfort",
+      "Best used sparingly due to its potency",
+    ],
+    caffeineFree: true,
+  },
+  {
+    id: "cardamom",
+    image: "/images/ingredients/cardamom.jpg",
+    commonName: "Cardamom",
+    botanicalName: "Elettaria cardamomum",
+    category: "seed",
+    shortDescription:
+      "A fragrant seed pod traditionally used to warm and stimulate digestion.",
+    traditionalUses: ["digestive comfort", "warmth"],
+    plantPart: "Seed",
+    origin: "South Asia",
+    flavorProfile: "Warm, floral, citrusy",
+    whyWeUseIt:
+      "Cardamom lends an aromatic warmth that lifts our spiced blends.",
+    healthBenefits: [
+      "Supports healthy digestion and reduces bloating",
+      "Freshens breath naturally",
+      "Contains antioxidant and anti-inflammatory compounds",
+      "May promote healthy circulation",
+      "Traditionally used to warm and stimulate digestion",
+    ],
+    caffeineFree: true,
+  },
+  {
+    id: "st-johns-wort",
+    image: "/images/ingredients/st-johns-wort.jpg",
+    commonName: "St. John's Wort",
+    botanicalName: "Hypericum perforatum",
+    category: "flower",
+    shortDescription:
+      "A golden-flowered herb with a long tradition of supporting emotional well-being.",
+    traditionalUses: ["uplift", "ease"],
+    plantPart: "Flower",
+    origin: "Europe",
+    flavorProfile: "Mild, herbal, faintly bitter",
+    whyWeUseIt:
+      "St. John's Wort supports the uplifting character of our mood-focused blends.",
+    healthBenefits: [
+      "Traditionally used to support emotional well-being and a positive mood",
+      "Helps support the nervous system during periods of mild emotional stress",
+      "May promote restful sleep when stress is a contributing factor",
+      "Possesses anti-inflammatory and antioxidant properties",
+      "Traditionally used for nerve discomfort",
+      "Important: interacts with many prescription medications, including antidepressants, birth control pills, blood thinners, and transplant medications — consult a healthcare professional before use",
+    ],
+    caffeineFree: true,
+  },
+  {
+    id: "hawthorn-berries",
+    image: "/images/ingredients/hawthorn-berries.jpg",
+    commonName: "Hawthorn Berries",
+    botanicalName: "Crataegus monogyna",
+    category: "fruit",
+    shortDescription:
+      "A deep red berry traditionally used over long-term use to strengthen and nourish the heart.",
+    traditionalUses: ["circulation", "vitality"],
+    plantPart: "Fruit",
+    origin: "Europe, Asia, North America",
+    flavorProfile: "Tart, fruity, slightly sweet",
+    whyWeUseIt:
+      "Hawthorn berries bring a tart, fruity depth to our heart-supportive blends.",
+    healthBenefits: [
+      "Supports healthy heart and cardiovascular function",
+      "Helps maintain healthy blood pressure already within the normal range",
+      "Rich in flavonoids and antioxidants that protect blood vessels",
+      "Promotes healthy circulation throughout the body",
+      "Traditionally used to strengthen and nourish the heart over long-term use",
+    ],
+    caffeineFree: true,
+  },
+  {
+    id: "tulsi",
+    image: "/images/ingredients/tulsi.jpg",
+    commonName: "Tulsi (Holy Basil)",
+    botanicalName: "Ocimum tenuiflorum",
+    category: "leaf",
+    shortDescription:
+      "A sacred adaptogenic leaf from Ayurvedic tradition, valued for helping the body adapt to stress.",
+    traditionalUses: ["calm", "vitality"],
+    plantPart: "Leaf",
+    origin: "South Asia",
+    flavorProfile: "Peppery, clove-like, herbal",
+    whyWeUseIt:
+      "Tulsi brings an adaptogenic, peppery depth to our stress-easing blends.",
+    healthBenefits: [
+      "An adaptogenic herb that helps the body adapt to stress",
+      "Supports a healthy immune system and overall wellness",
+      "Rich in antioxidants that help protect against oxidative stress",
+      "Promotes respiratory health and healthy breathing",
+      "May help maintain healthy blood sugar levels already within the normal range",
+      "Supports mental clarity, emotional balance, and calmness",
+    ],
+    caffeineFree: true,
+  },
+  {
+    id: "bitter-melon",
+    image: "/images/ingredients/bitter-melon.jpg",
+    commonName: "Bitter Melon",
+    botanicalName: "Momordica charantia",
+    category: "fruit",
+    shortDescription:
+      "A sharply bitter fruit traditionally used to support healthy blood sugar metabolism.",
+    traditionalUses: ["balance", "vitality"],
+    plantPart: "Fruit",
+    origin: "South Asia",
+    flavorProfile: "Bitter, sharp, vegetal",
+    whyWeUseIt:
+      "Bitter melon lends a sharp, cleansing edge to our metabolic-support blends.",
+    healthBenefits: [
+      "Traditionally used to support healthy blood sugar metabolism",
+      "May help improve insulin sensitivity and glucose utilization",
+      "Rich in antioxidants, vitamins, and beneficial plant compounds",
+      "Supports healthy digestion and metabolic function",
+      "Promotes overall pancreatic and metabolic health",
+    ],
+    caffeineFree: true,
+  },
+  {
+    id: "fenugreek",
+    image: "/images/ingredients/fenugreek.jpg",
+    commonName: "Fenugreek",
+    botanicalName: "Trigonella foenum-graecum",
+    category: "seed",
+    shortDescription:
+      "A small, aromatic seed traditionally used to support healthy blood sugar and digestion.",
+    traditionalUses: ["digestive comfort", "balance"],
+    plantPart: "Seed",
+    origin: "South Asia, Mediterranean",
+    flavorProfile: "Nutty, slightly bitter, maple-like",
+    whyWeUseIt:
+      "Fenugreek adds a nutty, maple-like note to our metabolic-support blends.",
+    healthBenefits: [
+      "Supports healthy blood sugar levels already within the normal range",
+      "May help improve insulin sensitivity and carbohydrate metabolism",
+      "Rich in soluble fiber that promotes digestive health",
+      "Supports healthy cholesterol levels and cardiovascular wellness",
+      "Traditionally used to support milk production in breastfeeding mothers",
+      "Provides antioxidants that support overall health",
+    ],
+    caffeineFree: true,
+  },
+  {
+    id: "gymnema-sylvestre",
+    image: "/images/ingredients/gymnema-sylvestre.jpg",
+    commonName: "Gymnema Sylvestre",
+    botanicalName: "Gymnema sylvestre",
+    category: "leaf",
+    shortDescription:
+      "A woody vine leaf known in Ayurvedic tradition as the “sugar destroyer” for its effect on sweet taste perception.",
+    traditionalUses: ["balance"],
+    plantPart: "Leaf",
+    origin: "South Asia",
+    flavorProfile: "Bitter, earthy, subtle",
+    whyWeUseIt:
+      "Gymnema sylvestre supports the metabolic focus of our balance-oriented blends.",
+    healthBenefits: [
+      "Traditionally known as the “sugar destroyer” for its ability to reduce sweet taste perception",
+      "Supports healthy blood sugar balance already within the normal range",
+      "May help promote healthy insulin function",
+      "Supports pancreatic health and glucose metabolism",
+      "May help reduce sugar cravings as part of a healthy lifestyle",
+      "Traditionally used in Ayurvedic medicine to support metabolic wellness",
+    ],
+    caffeineFree: true,
+  },
+  {
+    id: "red-ginseng",
+    image: "/images/ingredients/red-ginseng.jpg",
+    commonName: "Red Ginseng",
+    botanicalName: "Panax ginseng",
+    category: "root",
+    shortDescription:
+      "A powerful adaptogenic root traditionally used to build strength, resilience, and recovery from fatigue.",
+    traditionalUses: ["vitality", "focus"],
+    plantPart: "Root",
+    origin: "East Asia",
+    flavorProfile: "Earthy, slightly bitter, warming",
+    whyWeUseIt:
+      "Red ginseng brings a fortifying depth to our vitality-focused blends.",
+    healthBenefits: [
+      "A powerful adaptogenic herb that helps the body adapt to physical, mental, and emotional stress",
+      "Supports healthy energy levels, stamina, and endurance without the crash associated with stimulants",
+      "Promotes mental clarity, focus, memory, and cognitive performance",
+      "Supports a healthy immune system and overall vitality",
+      "May help maintain healthy blood sugar levels already within the normal range",
+      "Supports healthy circulation and cardiovascular function",
+      "Rich in ginsenosides and antioxidants that help protect cells from oxidative stress",
+      "Traditionally used to enhance strength, resilience, and recovery from fatigue",
+    ],
     caffeineFree: true,
   },
 ];
