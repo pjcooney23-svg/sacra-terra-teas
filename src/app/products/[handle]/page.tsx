@@ -1,6 +1,6 @@
-import Image from "next/image";
 import { notFound } from "next/navigation";
 import AddToCartForm from "@/components/AddToCartForm";
+import ProductGallery from "@/components/ProductGallery";
 import { getProductByHandle } from "@/lib/shopify";
 
 export async function generateMetadata({ params }: { params: { handle: string } }) {
@@ -26,43 +26,7 @@ export default async function ProductPage({ params }: { params: { handle: string
   return (
     <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
       <div className="grid gap-10 sm:grid-cols-2">
-        <div className="space-y-4">
-          <div className="group relative aspect-square overflow-hidden rounded-2xl bg-forest-50">
-            {images[0] ? (
-              <>
-                <Image
-                  src={images[0].url}
-                  alt={images[0].altText ?? product.title}
-                  fill
-                  priority
-                  className={`object-cover transition-opacity duration-500 ${
-                    images[1] ? "group-hover:opacity-0" : ""
-                  }`}
-                />
-                {images[1] && (
-                  <Image
-                    src={images[1].url}
-                    alt={images[1].altText ?? product.title}
-                    fill
-                    className="object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100"
-                  />
-                )}
-              </>
-            ) : (
-              <div className="flex h-full items-center justify-center text-forest-300">No image</div>
-            )}
-          </div>
-
-          {images.length > 1 && (
-            <div className="grid grid-cols-4 gap-3">
-              {images.slice(1, 5).map((image, index) => (
-                <div key={index} className="relative aspect-square overflow-hidden rounded-xl bg-forest-50">
-                  <Image src={image.url} alt={image.altText ?? product.title} fill className="object-cover" />
-                </div>
-              ))}
-            </div>
-          )}
-        </div>
+        <ProductGallery images={images} productTitle={product.title} />
 
         <div>
           <h1 className="font-serif text-3xl text-forest-700 sm:text-4xl">
